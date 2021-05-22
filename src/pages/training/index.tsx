@@ -7,7 +7,7 @@ import { TrainingLayout } from '@/layouts/TrainingLayout';
 const languageUI = 'ru';
 const content = data;
 
-export default function GrammarMenuPage() {
+export default function TrainingMenuPage() {
     return (
 
         <>

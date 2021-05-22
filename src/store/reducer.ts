@@ -7,6 +7,11 @@ const reducer = (state = initialState, action) => {
           ...state,
           languageUI: action.languageUI,
         }
+      case 'SET_POINTS':
+        return {
+          ...state,
+          points: action.points,
+        }
       default:
         return state
     }

@@ -1,15 +1,15 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import cookieCutter from 'cookie-cutter';
+import Link from 'next/link'
 import classNames from 'classnames';
-import { IRootState } from  '@/interfaces/IRootState'
+import { IRootState } from  '@/interfaces/IRootState';
 
 import styles from './navbar.module.scss';
 
 
 export function Navbar() {
 
-    const languageUI = useSelector((state: IRootState) => state.languageUI);
+    const points = useSelector((state: IRootState) => state.points);
     const dispatch = useDispatch();
       
     /*
@@ -41,12 +41,17 @@ export function Navbar() {
         <>
             <nav className={classNames(styles.navBorder, "navbar is-fixed-top")} role="navigation" aria-label="main navigation">
                 <div className="navbar-brand">
-                    <a className="navbar-item" href="#">
-                        <div className={styles.container}>
-                            <img className={styles.logo}src="/images/logo_edScramble.png" />
-                            <span className={styles.text}>hackaton-motivation</span>
-                        </div>
-                    </a>
+                    <Link href="/">
+                        <a className="navbar-item">
+                            <div className={styles.container}>
+                                <img className={styles.logo}src="/images/logo_edScramble.png" />
+                                <span className={styles.text}>hackaton-motivation</span>
+                            </div>
+                        </a>
+                    </Link>
+                    <div className={ styles.points }>
+                        <img className={ styles.icon } src="/images/summit.png" /> Высота: { points }
+                    </div>
                 </div>
                 
 
@@ -54,15 +59,21 @@ export function Navbar() {
                     <div className="navbar-item">
                         <div id="navbarBasicExample" className="navbar-menu">
                             <div className="navbar-start">
-                                <a className="navbar-item">
-                                    Тренировка
-                                </a>
-                                <a className="navbar-item">
-                                    Достижения
-                                </a>
-                                <a className="navbar-item">
-                                    Рейтинги
-                                </a>
+                                <Link href="/training">
+                                    <a className="navbar-item">
+                                        <img className={ styles.icon } src="/images/pickaxe.png" /> Тренировка
+                                    </a>
+                                </Link>
+                                <Link href="/user">
+                                    <a className="navbar-item">
+                                        <img className={ styles.icon } src="/images/medal-outline.png" /> Достижения
+                                    </a>
+                                </Link>
+                                <Link href="/rating">
+                                    <a className="navbar-item">
+                                        <img className={ styles.icon } src="/images/podium-silver.png" /> Рейтинг
+                                    </a>
+                                </Link>
                             </div>
                         </div>
 
