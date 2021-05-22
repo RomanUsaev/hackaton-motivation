@@ -59,6 +59,11 @@ export function Navbar() {
                     <div className="navbar-item">
                         <div id="navbarBasicExample" className="navbar-menu">
                             <div className="navbar-start">
+                                <Link href="/targets">
+                                    <a className="navbar-item">
+                                        <img className={ styles.icon } src="/images/map-marker-radius-outline.png" /> Цели
+                                    </a>
+                                </Link>
                                 <Link href="/training">
                                     <a className="navbar-item">
                                         <img className={ styles.icon } src="/images/pickaxe.png" /> Тренировка
@@ -76,7 +81,6 @@ export function Navbar() {
                                 </Link>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </nav>

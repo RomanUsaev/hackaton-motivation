@@ -12,8 +12,8 @@ export default function TrainingMenuPage() {
 
         <>
             { content.length && (
-                <MainLayout title={`Тренировка ${content[0][languageUI].title.text}`} >
-                    <TrainingLayout {...content[0][languageUI]}/> 
+                <MainLayout title={ `Тренировка ${ content[0][languageUI].title.text }` } >
+                    <TrainingLayout { ...content[0][languageUI] } /> 
                 </MainLayout>
             )}
         </>
