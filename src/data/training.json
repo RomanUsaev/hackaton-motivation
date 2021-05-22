@@ -1,0 +1,72 @@
+[
+    {
+        "url": "to-be",
+        "ru": {
+            "title": {
+                "text": "To be - Present Simple",
+                "format": null
+            },
+            "about": {
+                "text": "Глагол «to be» (быть, находиться) используется, когда мы говорим о возрасте, имени, занятии, статусе, состоянии, размере, цвете, местоположении и др. Этот глагол меняется в зависимости от подлежащего или местоимения.",
+                "format": null
+            },
+            "message": {
+                "text": null,
+                "format": null
+            },
+            "content": [
+                {
+                    "title": {
+                        "text": "Повествовательная форма",
+                        "format": "tag is-success is-medium is-light"
+                    },
+                    "about": {
+                        "text": "I am = I’m \r\nHe / she / it is = he’s / she’s / it’s \r\nWe / you / they are = we're / you’re / they’re",
+                        "format": null
+                    },
+                    "message": {
+                        "text": "I am a doctor.\r\nShe is Anna. She is 25 and she’s my sister.\r\nWe are at home. \r\nThey are our friends.",
+                        "format": "message is-dark is-small"
+                    },
+                    "practice": {
+                        "text": null,
+                        "format": null
+                    }
+                }           
+            ],
+            "practice": [
+                {
+                    "title": {
+                        "text": "Практика. Расставьте слова в правильном порядке:",
+                        "format": "message is-dark is-small"
+                    },
+                    "text": {
+                        "text": "My brother and I are students",
+                        "format": null
+                    } 
+                },
+                {
+                    "title": {
+                        "text": "Практика. Расставьте слова в правильном порядке:",
+                        "format": "message is-dark is-small"
+                    },
+                    "text": {
+                        "text": "She is a doctor",
+                        "format": null
+                    } 
+                },
+                {
+                    "title": {
+                        "text": "Практика. Расставьте слова в правильном порядке:",
+                        "format": "message is-dark is-small"
+                    },
+                    "text": {
+                        "text": "I am a boy",
+                        "format": null
+                    } 
+                }
+            ]
+
+        }
+    }  
+]

@@ -1,0 +1,19 @@
+@import "@/styles/color.scss"; 
+
+
+.simpleBlock {
+    margin-top: 40px;
+}
+
+
+.container {
+    display: 'flex';
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+.word {
+    margin-right: 5px; 
+    margin-top: 5px; 
+}
+  
