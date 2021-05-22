@@ -9,11 +9,19 @@
 .container {
     display: 'flex';
     flex-direction: row;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    justify-content: space-between; 
+
+    .word {
+        margin-right: 5px; 
+        margin-top: 5px; 
+    }
+      
+    .icon {
+        margin-left: 20px;
+        width: 15px;
+        height: 15px;
+    }
+    
 }
 
-.word {
-    margin-right: 5px; 
-    margin-top: 5px; 
-}
-  

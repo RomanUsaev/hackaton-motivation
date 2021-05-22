@@ -29,16 +29,15 @@ export function TrainingLayout(props: IGrammar) {
             <div className="columns is-centered">
                 <div className="column is-6">
                     <div className="content is-normal">
-                        <h1 className="is-centered"> { title.text }</h1>
+                        <h1> { title.text }</h1>
                         <div>
                             <div className="tabs is-centered">
                                 <ul>
                                     <li className="is-active">
-                                        <a>Подготовка</a>
+                                        <a><span><img className={ styles.icon } src="/images/map-search-outline.png" /></span> Подготовка</a>
                                     </li>
-                                    <li><a>Практика</a></li>
-                                    <li><a>Соревнование</a></li>
-                                    <li><a>Наставничество</a></li>
+                                    <li><a><span><img className={ styles.icon } src="/images/hiking.png" /></span> Соревнование</a></li>
+                                    <li><a><span><img className={ styles.icon } src="/images/map-check-outline.png" /></span> Наставничество</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -47,12 +46,14 @@ export function TrainingLayout(props: IGrammar) {
                         { content.map((item: IGrammarContent, key: number) => generatePostsBlock({ ...item, key })) }
                         { practice && <div className="content is-normal">
                             { practice.map((item: ITest, index: number) => (
-                                <article className="message is-info is-small">
-                                    <div className="message-header">
-                                        <p className={styles.enableLineBreak}>{ item.title.text }</p>
-                                    </div>
-                                    <OrderPractice { ...item }/>
-                                </article> 
+                                <div key={ `practice-${index}` }>
+                                    <article className="message is-info is-small">
+                                        <div className="message-header">
+                                            <p className={styles.enableLineBreak}>{ item.title.text }</p>
+                                        </div>
+                                        <OrderPractice { ...item }/>
+                                    </article> 
+                                </div>
                             ))
                             }
                         </div> }  

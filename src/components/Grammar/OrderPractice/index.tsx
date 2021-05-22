@@ -5,7 +5,6 @@ import arrayMove from 'array-move';
 
 import { ITest } from '@/interfaces/ITest';
 
-
 import styles from './test.module.scss';
 
 
@@ -20,11 +19,13 @@ const SortableItem = SortableElement(({value, word}) => {
 });
 
 const SortableList = SortableContainer(({items, array}) => {
+
     return (
         <div className={styles.container}>
             { items.map((value, index) => (
                 <SortableItem key={`item-${value}`} index={index} value={value} word={array[index]}/>      
             )) }
+            { items.join() == array.join() ? <img className={ styles.icon } src="/images/pickaxe.png" /> : null }
         </div>
     );
 });

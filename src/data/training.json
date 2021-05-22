@@ -41,26 +41,6 @@
                         "format": "message is-dark is-small"
                     },
                     "text": {
-                        "text": "My brother and I are students",
-                        "format": null
-                    } 
-                },
-                {
-                    "title": {
-                        "text": "Практика. Расставьте слова в правильном порядке:",
-                        "format": "message is-dark is-small"
-                    },
-                    "text": {
-                        "text": "She is a doctor",
-                        "format": null
-                    } 
-                },
-                {
-                    "title": {
-                        "text": "Практика. Расставьте слова в правильном порядке:",
-                        "format": "message is-dark is-small"
-                    },
-                    "text": {
                         "text": "I am a boy",
                         "format": null
                     } 
