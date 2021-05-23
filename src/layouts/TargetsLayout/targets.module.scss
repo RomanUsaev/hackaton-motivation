@@ -22,13 +22,13 @@
     }    
 
     .one {
-        left: 130px;
-        top: 210px;
+        left: 150px;
+        top: 190px;
     }  
 
     .two {
-        left: 200px;
-        top: 140px;
+        left: 210px;
+        top: 130px;
     } 
 
     .three {
@@ -38,6 +38,42 @@
 
     .active {
         background-color: red;
+    }
+
+    .user {
+        background-color: orange;
+    }
+
+
+
+    .point0 {
+        left: 90px;
+        top: 250px;
+    }
+
+    .point1 {
+        left: 100px;
+        top: 240px;
+    }
+
+    .point2 {
+        left: 110px;
+        top: 230px;
+    }
+
+    .point3 {
+        left: 120px;
+        top: 220px;
+    }
+
+    .point4 {
+        left: 130px;
+        top: 210px;
+    }
+
+    .point5 {
+        left: 150px;
+        top: 190px;
     }
 }
 

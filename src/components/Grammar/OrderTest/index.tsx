@@ -2,12 +2,9 @@ import React, { Component, useState } from 'react';
 import classNames from 'classnames';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
-
 import { ITest } from '@/interfaces/ITest';
 
-
 import styles from './test.module.scss';
-
 
 
 
@@ -18,6 +15,7 @@ const SortableItem = SortableElement(({value, word, isAnswer}) => {
         </div>
     );
 });
+
 
 const SortableList = SortableContainer(({items, array, isAnswer}) => {
     const [isAnswerTrue, setAnswerTrue] = useState(false);
@@ -32,6 +30,7 @@ const SortableList = SortableContainer(({items, array, isAnswer}) => {
         </div>
     );
 });
+
 
 const createState = (props) => {
     const { text } = props;
@@ -51,7 +50,6 @@ type State = {
 }
 type Answer = {
     isAnswer: boolean,
-    setAlltrue: void,
 }
 type TypeOrderTest = ITest & Answer;
 export class OrderTest extends Component<TypeOrderTest, State> {
@@ -74,11 +72,8 @@ export class OrderTest extends Component<TypeOrderTest, State> {
     
     render() {
         const { items, array } = this.state; 
-        const { title, author, isAnswer, setAlltrue } = this.props; 
-        console.log(isAnswer);
+        const { title, author, isAnswer } = this.props; 
        
-
-
         return (
             <div className="content is-normal">
                 { title.text && <article className={classNames(title.format)}>

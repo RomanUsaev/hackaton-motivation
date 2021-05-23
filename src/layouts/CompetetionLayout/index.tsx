@@ -11,10 +11,7 @@ export function CompetetionLayout() {
     
     const { competetion } =  competetionData[0];
     const [ isAnswer, setAnswer ] = useState<boolean>(false);
-    const [ allTrue, setAlltrue ] = useState<boolean>(false);
-
-    console.log(isAnswer)
-    
+   
     return (
         <>
             <div className="content">
@@ -24,7 +21,7 @@ export function CompetetionLayout() {
                     { competetion.map((item: ITest, index: number) => (
                         <div key={ `practice-${index}` } className={ styles.simpleBlock }>
                             <article className="message is-info is-small">
-                                <OrderTest { ...item } isAnswer={ isAnswer } setAlltrue={ setAlltrue }/>
+                                <OrderTest { ...item } isAnswer={ isAnswer } />
                             </article> 
                         </div>
                     ))

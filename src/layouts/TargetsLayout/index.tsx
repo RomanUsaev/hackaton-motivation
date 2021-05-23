@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { IRootState } from  '@/interfaces/IRootState';
 import classNames from 'classnames';
 import styles from './targets.module.scss';
 
 export function TargetsLayout() {
 
     const [mouseTarget, setMouseTarget] = useState<number>(0);
+    const points = useSelector((state: IRootState) => state.points);
     
       return (
         <>
@@ -27,6 +30,7 @@ export function TargetsLayout() {
                                 <img className={ classNames(styles.checkpoint, styles.three, styles.active) }src="/images/flag-checkered.png" />  : 
                                 <img className={ classNames(styles.checkpoint, styles.three) }src="/images/flag-outline.png" /> 
                             }
+                            <img className={ classNames(styles.checkpoint, styles[`point${ points }`], styles.user) } src="/images/hiking.png" />
                         </div>
 
 

@@ -38,9 +38,9 @@ export function TrainingLayout(props: IGrammar) {
                             </div>
                         </div>
                         <div>
-                            { turn==='lesson' && <LessonLayout {...props} /> }
-                            { turn==='competetion' && <CompetetionLayout {...props} /> }
-                            { turn==='add' && <AddLayout {...props} /> }
+                            { turn === 'lesson' && <LessonLayout {...props} /> }
+                            { turn === 'competetion' && <CompetetionLayout /> }
+                            { turn === 'add' && <AddLayout /> }
                         </div>
                     </div>
                 </div>
