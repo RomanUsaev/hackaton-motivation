@@ -1,46 +1,39 @@
-import classNames from 'classnames';
-import { OrderPractice } from '@/components/Grammar/OrderPractice';
-import { IGrammar, IGrammarContent,  } from '@/interfaces/IGrammar';
+import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
+import { OrderTest } from '@/components/Grammar/OrderTest';
 import { ITest } from '@/interfaces/ITest';
+import competetionData from '@/data/competetion.json';
+import classNames from 'classnames';
 
 import styles from './competetion.module.scss';
 
-export function CompetetionLayout(props: IGrammar) {
-    const { about, message, content, practice } = props;
+export function CompetetionLayout() {
+    
+    const { competetion } =  competetionData[0];
+    const [ isAnswer, setAnswer ] = useState<boolean>(false);
+    const [ allTrue, setAlltrue ] = useState<boolean>(false);
 
-    const generatePostsBlock = (content) => {
-        const { title, about, message, practice, key } = content; 
-        return (
-            <div className={ styles.simpleBlock } key={ key }>
-                { title && title.text && <h4>{ title.text }</h4> }
-                { about.text && <p className={ classNames(styles.enableLineBreak) }>{ about.text }</p> }
-                { message.text && <article className={ classNames(styles.enableLineBreak, "message is-info is-small") }>
-                    <div className="message-body">
-                        <p className={styles.enableLineBreak}>{message.text}</p>
-                    </div>
-                </article> }
-            </div>
-        );
-    }
-
+    console.log(isAnswer)
     
     return (
         <>
-            { generatePostsBlock({ about, message, practice, key: "headKey" }) }
-            { content.map((item: IGrammarContent, key: number) => generatePostsBlock({ ...item, key })) }
-            { practice && <div className="content is-normal">
-                { practice.map((item: ITest, index: number) => (
-                    <div key={ `practice-${index}` }>
-                        <article className="message is-info is-small">
-                            <div className="message-header">
-                                <p className={styles.enableLineBreak}>{ item.title.text }</p>
-                            </div>
-                            <OrderPractice { ...item }/>
-                        </article> 
-                    </div>
-                ))
-                }
-            </div> }  
+            <div className="content">
+                <h3 className={ styles.title }>Выполните задания</h3>
+                <p>Достигнуть высоты можно только правильно ответив на все задания. Скорость выполнения влияет на твой рейтинг.</p>
+                { competetionData && <p className="content is-normal">
+                    { competetion.map((item: ITest, index: number) => (
+                        <div key={ `practice-${index}` } className={ styles.simpleBlock }>
+                            <article className="message is-info is-small">
+                                <OrderTest { ...item } isAnswer={ isAnswer } setAlltrue={ setAlltrue }/>
+                            </article> 
+                        </div>
+                    ))
+                    }
+                </p> }  
+                <button className="button is-info" onClick={ () => setAnswer(true)}>Проверить</button>
+                
+            </div>  
+            
         </>
     );
 }

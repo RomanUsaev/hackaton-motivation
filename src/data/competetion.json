@@ -1,0 +1,48 @@
+[
+    {
+        "competetion": [
+            {
+                "title": {
+                    "text": "Расставьте слова в правильном порядке ",
+                    "format": "message is-dark is-small"
+                },
+                "text": {
+                    "text": "They are students",
+                    "format": null
+                },
+                "author": {
+                    "text": "user123",
+                    "format": null
+                } 
+            },
+            {
+                "title": {
+                    "text": "Расставьте слова в правильном порядке ",
+                    "format": "message is-dark is-small"
+                },
+                "text": {
+                    "text": "She is a doctor",
+                    "format": null
+                },
+                "author": {
+                    "text": "Mr.X",
+                    "format": null
+                }
+            },
+            {
+                "title": {
+                    "text": "Расставьте слова в правильном порядке ",
+                    "format": "message is-dark is-small"
+                },
+                "text": {
+                    "text": "I am a builder",
+                    "format": null
+                },
+                "author": {
+                    "text": "Roman",
+                    "format": null
+                }
+            }
+        ]
+    } 
+]
