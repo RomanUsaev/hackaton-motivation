@@ -4,7 +4,7 @@ export default function HomePage() {
     return (
         <>
             <MainLayout title={'Home page'}>
-                <div>Welcome to hackaton-motivation!</div>     
+                <div>Welcome to hackathon-motivation!</div>     
             </MainLayout>
         </>
     );

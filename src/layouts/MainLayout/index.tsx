@@ -21,7 +21,7 @@ export function MainLayout(props: IMain) {
     return (
         <>
             <Head>
-                <title>{title} | hackaton-motivation</title>
+                <title>{title} | hackathon-motivation</title>
             </Head>
             <div className={ styles.navbar }>
                 <Navbar/>

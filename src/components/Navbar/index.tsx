@@ -37,7 +37,7 @@ export function Navbar() {
                         <a className="navbar-item">
                             <div className={styles.container}>
                                 <img className={styles.logo}src="/images/logo_edScramble.png" />
-                                <span className={styles.text}>hackaton-motivation</span>
+                                <span className={styles.text}>hackathon-motivation</span>
                             </div>
                         </a>
                     </Link>

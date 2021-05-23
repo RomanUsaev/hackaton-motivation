@@ -6,7 +6,7 @@ export function Footer() {
         <>
             <footer className={classNames(styles.footerBlock, "footer")}>
                 <div className="content has-text-centered">
-                    <p>© 2021 | hackaton-motivation</p>
+                    <p>© 2021 | hackathon-motivation</p>
                 </div>
             </footer>
         </>

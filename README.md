@@ -1,2 +1,2 @@
-# hackaton-motivation
-EdTech hackaton - motivation.
+# hackathon-motivation
+EdTech hackathon - motivation.
