@@ -9,6 +9,7 @@
 .canvas {
     position: relative;
     width: 100%;
+    text-align: center;
 
     .everest {
         height: 400px;
@@ -22,17 +23,17 @@
     }    
 
     .one {
-        left: 150px;
+        left: 290px;
         top: 190px;
     }  
 
     .two {
-        left: 210px;
+        left: 350px;
         top: 130px;
     } 
 
     .three {
-        left: 280px;
+        left: 420px;
         top: 60px;
     } 
 
@@ -47,32 +48,32 @@
 
 
     .point0 {
-        left: 90px;
+        left: 230px;
         top: 250px;
     }
 
     .point1 {
-        left: 100px;
+        left: 240px;
         top: 240px;
     }
 
     .point2 {
-        left: 110px;
+        left: 250px;
         top: 230px;
     }
 
     .point3 {
-        left: 120px;
+        left: 260px;
         top: 220px;
     }
 
     .point4 {
-        left: 130px;
+        left: 270px;
         top: 210px;
     }
 
     .point5 {
-        left: 150px;
+        left: 290px;
         top: 190px;
     }
 }
