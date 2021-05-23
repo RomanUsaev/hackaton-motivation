@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import Link from 'next/link'
 import classNames from 'classnames';
 import { IRootState } from  '@/interfaces/IRootState';
@@ -9,19 +9,11 @@ import styles from './navbar.module.scss';
 
 export function Navbar() {
 
+    const checkpoint = useSelector((state: IRootState) => state.checkpoint);
     const points = useSelector((state: IRootState) => state.points);
-    const dispatch = useDispatch();
+    const target = useSelector((state: IRootState) => state.target);
       
-    /*
-    const handleOnClick = (value: string) => {
-        cookieCutter.set('languageUI', value);
-        dispatch({
-            type: 'SET_LANGUAGE_UI',
-            languageUI: value,
-        });
-    } 
-    */
-
+   
     useEffect(() => {
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
         if ($navbarBurgers.length > 0) {
@@ -50,7 +42,8 @@ export function Navbar() {
                         </a>
                     </Link>
                     <div className={ styles.points }>
-                        <img className={ styles.icon } src="/images/summit.png" /> Высота: { points }
+                        <img className={ classNames(styles.icon, styles.leftmargin) } src="/images/flag-outline.png" /> Чекпоинт: { checkpoint }
+                        <img className={ classNames(styles.icon, styles.leftmargin) } src="/images/summit.png" /> Высота: { points }/{ target }
                     </div>
                 </div>
                 
@@ -72,11 +65,6 @@ export function Navbar() {
                                 <Link href="/user">
                                     <a className="navbar-item">
                                         <img className={ styles.icon } src="/images/medal-outline.png" /> Достижения
-                                    </a>
-                                </Link>
-                                <Link href="/rating">
-                                    <a className="navbar-item">
-                                        <img className={ styles.icon } src="/images/podium-silver.png" /> Рейтинг
                                     </a>
                                 </Link>
                             </div>

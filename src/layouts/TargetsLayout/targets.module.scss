@@ -1,0 +1,55 @@
+@import "@/styles/color.scss"; 
+
+
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.canvas {
+    position: relative;
+    width: 100%;
+
+    .everest {
+        height: 400px;
+    }
+
+    .checkpoint {
+        position: absolute;  
+        width: 20px;
+        height: 20px;
+        background-color: white;  
+    }    
+
+    .one {
+        left: 130px;
+        top: 210px;
+    }  
+
+    .two {
+        left: 200px;
+        top: 140px;
+    } 
+
+    .three {
+        left: 280px;
+        top: 60px;
+    } 
+
+    .active {
+        background-color: red;
+    }
+}
+
+
+.table {
+    margin-top: 20px;
+
+    .nonActiveText {
+        color: grey;
+    }
+    
+}
+
+
+

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import classNames from 'classnames';
 import {SortableContainer, SortableElement} from 'react-sortable-hoc';
 import arrayMove from 'array-move';
@@ -20,22 +20,20 @@ const SortableItem = SortableElement(({value, word}) => {
 
 const SortableList = SortableContainer(({items, array}) => {
 
-    const [isPointSaved, setPointSaves] = useState(false)
+    const [isPointSaved, setPointSaved] = useState(false);
+    const [isAnswerTrue, setAnswerTrue] = useState(false);
     const points = useSelector((state: IRootState) => state.points);
     const dispatch = useDispatch();
       
-    const setPoints = () => {
-        console.log(points);
+    (items.join() == array.join() && !isAnswerTrue) ? setAnswerTrue(true) : null; 
+   
+    
+    if (isAnswerTrue && !isPointSaved) { 
         dispatch({
             type: 'SET_POINTS',
             points: points + 1,
         });
-    }
-    
-    const isAnswerTrue = items.join() == array.join();
-    if (isAnswerTrue && !isPointSaved) { 
-        setPoints();
-        setPointSaves(true)
+        setPointSaved(true)
     }
     
 
@@ -44,7 +42,7 @@ const SortableList = SortableContainer(({items, array}) => {
             { items.map((value, index) => (
                 <SortableItem key={`item-${value}`} index={index} value={value} word={array[index]}/>      
             )) }
-            { isAnswerTrue && <img className={ styles.icon } src="/images/pickaxe.png" /> }
+            {  isAnswerTrue && <img className={ styles.icon } src="/images/pickaxe.png" /> }
         </div>
     );
 });
